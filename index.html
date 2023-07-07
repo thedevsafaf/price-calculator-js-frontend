@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <div class="print">
+                <label for="price">Price:</label>
+                <input type="number" name="price" id="priceInput" placeholder="Enter the price" min="1" oninput="calculateTotalPrice()"><br>
+                <label for="quantity">Quantity:</label>
+                <input type="number" name="quantity" id="quantityInput" placeholder="Enter the quantity" min="1" oninput="calculateTotalPrice()"><br>
+                <label for="gst">GST:</label>
+                <input type="number" name="gst" id="gstInput" placeholder="Enter the GST" min="0" oninput="calculateTotalPrice()"><br>
+                <label for="delivery-charge">Delivery Charge:</label>
+                <input type="number" name="delivery-charge" id="deliveryChargeInput" placeholder="Enter the Delivery charge" min="0" oninput="calculateTotalPrice()"><br>
+                <h4>Total Price: <span id="total-price">0</span></h4>
+            </div>
+            <div class="no-print">
+                <a href="#" class="btn" onclick="invoicePrint()">Print Order</a>
+            </div>
+        </form>    
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
